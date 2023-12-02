@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200&family=Open+Sans&      family=Roboto:wght@100;300;400&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>interactive-card</title>
+</head>
+<body>
+    <div>
+        <div class="top-background">
+            <div class="card-div">
+                <div class="back-card">
+                    <div id="back-cvc">123</div>
+                </div>
+                <div class="front-card">
+                    <div id="num-front-card">0000000000000000</div>
+                    <div id="name-front-card">TIMI DELAD</div>
+                    <div id="month-front-card">00</div>
+                    <div id="slash-front-card">/</div>
+                    <div id="year-front-card">00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="big-div-container">
+            <div class="small-div-container" id="small-div-container">
+                <form action="" class="form" name="myForm" id="form-id">
+                    <label for="cardholder" class="l-cardholder-name"><b>CARDHOLDER NAME</b></label><br>
+                    <input type="text" name="cardholder" id="cardholder-name" placeholder="e.g Timi Delad"  maxlength="20" pattern="[A-Za-z ]+">
+                    <p id="cardholderP"></p><br>
+                    <label for="number" class="l-card-number"><b>CARD NUMBER</b></label><br>
+                    <input type="number" name="number" id="card-number" placeholder="e.g 1234 5678 9123 0000" oninput="cardNumber(this)">
+                    <p id="numberP"></p><br>
+                    <label for="exp"><b>EXP. DATE (MM/YY)</b></label>
+                    <label for="cvc-nu" class="cvc" class="cvc-class"><b>CVC</b></label><br>
+                    <input type="number" list="month" id="mm-num" placeholder="MM" name="exp" oninput="twoNumberLength(this)">
+                    <datalist id="month">
+                        <option value="01"></option>
+                        <option value="02"></option>
+                        <option value="03"></option>
+                        <option value="04"></option>
+                        <option value="05"></option>
+                        <option value="06"></option>
+                        <option value="07"></option>
+                        <option value="08"></option>
+                        <option value="09"></option>
+                        <option value="10"></option>
+                        <option value="11"></option>
+                        <option value="12"></option>
+                    </datalist>
+                    <input type="number" list="year" id="yy-num" placeholder="YY" name="num" oninput="twoNumberLength(this)">
+                    <datalist id="year">
+                        <option value="24">
+                        <option value="25">
+                        <option value="26">
+                        <option value="27">
+                        <option value="28">
+                    </datalist>
+                    <input type="number" id="cvc-num" name="cvc-nu" placeholder="e.g 123" oninput="threeNumberLength(this)">
+                    <p id="inputP"></p>
+                    <p id="cvcP"></p><br>
+                    <input type="button" id="button" value="confirm" onclick="validateForm()">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

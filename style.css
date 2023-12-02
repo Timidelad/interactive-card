@@ -1,0 +1,225 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.card-div {
+    position: relative;
+    width: 303px;
+    height: 214px;
+    margin-top: 50px;
+}
+
+.back-card {
+    position: absolute;
+    background-image: url(./image/bg-card-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 140px;
+    right: 0;
+    top: 0;
+}
+
+.front-card {
+    position: absolute;
+    background-image: url(./image/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 140px;
+    top: 77px;
+    right: 53px;
+}
+
+.top-background {
+    background-image: url(./image/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+#back-cvc {
+    position: absolute;
+    top: 62px;
+    right: 40px;
+    color: white;
+    font-size: 11px;
+}
+
+#num-front-card {
+    position: absolute;
+    color: white;
+    left: 20px;
+    top: 80px;
+    letter-spacing: 3px;
+}
+
+#name-front-card {
+    position: absolute;
+    color: white;
+    left: 20px;
+    top: 108px;
+    font-size: 11px;
+}
+
+#month-front-card {
+    position: absolute;
+    color: white;
+    right: 51px;
+    top: 108px;
+    font-size: 11px;
+}
+
+#slash-front-card {
+    position: absolute;
+    color: white;
+    right: 45px;
+    top: 108px;
+    font-size: 11px;
+}
+
+#year-front-card {
+    position: absolute;
+    color: white;
+    right: 30px;
+    top: 108px;
+    font-size: 11px;
+}
+
+.big-div-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.small-div-container {
+    width: 307px;
+}
+
+#cardholder-name, #card-number {
+    border-radius: 6px;
+    width: 300px;
+    height: 35px;
+    border: 1px solid grey;
+}
+
+#mm-num {
+    margin-right: 5px;
+    border-radius: 6px;
+    width: 70px;
+    height: 35px;
+    border: 1px solid grey;
+}
+
+#yy-num {
+    margin-right: 5px;
+    border-radius: 6px;
+    width: 70px;
+    height: 35px;
+    border: 1px solid grey;
+}
+
+#cvc-num {
+    border-radius: 6px;
+    width: 130px;
+    height: 35px;
+    border: 1px solid grey;
+}
+
+input[type="button"] {
+    width: 306px;
+    height: 40px;
+    border-radius: 6px;
+    font-style: bold;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+}
+
+#cardholderP, #numberP, #inputP {
+    margin-top: 0px;
+    margin-bottom: -5px;
+    padding: 0px;
+    font-size: 10px;
+    color: red;
+}
+
+#cvcP {
+    margin-top: -12px;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 172px;
+    font-size: 10px;
+    color: red;
+}
+
+.cvc-class {
+    margin-left: 10px;
+}
+
+#wrapper-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper-container > div {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: hsl(278, 68%, 11%);
+    width: 306px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+    .top-background {
+        width: 30%;
+        height: 100vh;
+        float: left;
+        width: 30%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .big-div-container {
+        margin-top: 0;
+        float: right;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-div {
+        position: absolute;
+        width: 304px;
+        height: 307px;
+        margin-right: -30%;
+    }
+
+    .front-card {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .back-card {
+        position: absolute;
+        right: 0;
+        top: 170px;
+    }
+}
